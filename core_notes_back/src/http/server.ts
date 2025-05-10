@@ -1,4 +1,4 @@
-import 'dotenv/config'; // Carrega as variáveis de ambiente automaticamente
+import 'dotenv/config'; // Carrega as variáveis de ambiente
 import fastify from 'fastify';
 import cors from '@fastify/cors';
 import { CreateNote } from '../routes/create-note';
@@ -11,8 +11,8 @@ import { serializerCompiler, validatorCompiler } from 'fastify-type-provider-zod
 
 const app = fastify();
 
-// Garantindo que a variável de ambiente `PORT` seja um número
-const port = Number(process.env.PORT) || 3333; // Converte para número ou usa 3333 como fallback
+// Certifique-se de que a variável `PORT` está sendo usada corretamente
+const port = process.env.PORT ? Number(process.env.PORT) : 3333; // Usar a variável de ambiente `PORT` ou fallback para 3333
 
 // Registro do CORS
 app.register(cors, {
@@ -33,6 +33,7 @@ app.register(UpdateColorNote);
 app.register(DeleteNote);
 
 // Inicializando o servidor
-app.listen({ port }).then(() => {
+app.listen({ port, host: '0.0.0.0' }).then(() => {
   console.log(`HTTP server running on port ${port}`);
 });
+
