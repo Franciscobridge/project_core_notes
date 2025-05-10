@@ -1,3 +1,4 @@
+import 'dotenv/config'; // Carrega as variáveis de ambiente automaticamente
 import fastify from 'fastify';
 import cors from '@fastify/cors';
 import { CreateNote } from '../routes/create-note';
