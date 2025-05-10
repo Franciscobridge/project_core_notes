@@ -20,7 +20,7 @@ export default function App() {
     }
 
     try {
-      const response = await fetch("http://localhost:3333/create-note", {
+      const response = await fetch("https://core-notes-project.onrender.com/create-note", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

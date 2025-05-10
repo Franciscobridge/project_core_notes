@@ -35,7 +35,7 @@ export default function NotaCard({ note, update }: NoteCardProps) {
   const saveDataChanged = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3333/update-note/${note.id}`,
+        `https://core-notes-project.onrender.com/update-note/${note.id}`,
         {
           method: "PATCH",
           headers: {
@@ -61,7 +61,7 @@ export default function NotaCard({ note, update }: NoteCardProps) {
   const handleChangeColorNote = async (color: string) => {
     try {
       const response = await fetch(
-        `http://localhost:3333/update-note-color/${note.id}`,
+        `https://core-notes-project.onrender.com/update-note-color/${note.id}`,
         {
           method: "PATCH",
           headers: {
@@ -86,7 +86,7 @@ export default function NotaCard({ note, update }: NoteCardProps) {
   const handleToogleNoteFavorite = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3333/update-note-favorite/${note.id}`,
+        `https://core-notes-project.onrender.com/update-note-favorite/${note.id}`,
         {
           method: "PATCH",
           headers: {
@@ -111,7 +111,7 @@ export default function NotaCard({ note, update }: NoteCardProps) {
   const handleDeleteNote = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3333/delete-note/${note.id}`,
+        `https://core-notes-project.onrender.com/delete-note/${note.id}`,
         {
           method: "DELETE",
         }

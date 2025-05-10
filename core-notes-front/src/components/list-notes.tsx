@@ -8,7 +8,7 @@ export default function ListNotes({ newNote, valueFilter }: ListNoteProps) {
 
   async function getAllNotes() {
     try {
-      const response = await fetch("http://localhost:3333/all-notes");
+      const response = await fetch("https://core-notes-project.onrender.com/all-notes");
       if (!response.ok) {
         throw new Error("Erro ao buscar usuarios");
       }
