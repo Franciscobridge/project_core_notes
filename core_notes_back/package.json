@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/http/server.ts"
+    "dev": "tsx --env-file=.env watch src/http/server.ts"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +13,7 @@
   "dependencies": {
     "@fastify/cors": "^11.0.1",
     "@prisma/client": "^6.6.0",
+    "dotenv": "^16.5.0",
     "express": "^4.21.2",
     "fastify": "^5.2.2",
     "fastify-type-provider-zod": "^4.0.2",
@@ -27,7 +28,10 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "@prisma/client"
+      "@prisma/client",
+      "@prisma/engines",
+      "esbuild",
+      "prisma"
     ]
   }
 }
