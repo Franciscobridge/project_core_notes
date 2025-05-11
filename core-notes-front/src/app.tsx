@@ -99,7 +99,7 @@ export default function App() {
           <div className="w-full h-14 border-t border-gray-300 flex px-5 py-2">
             <textarea
               className="w-full resize-none outline-none text-sm text-gray-700"
-              placeholder="Criar notas..."
+              placeholder="Criar notas... para criar pressione enter"
               aria-label="Criar nota"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
