@@ -53,7 +53,7 @@ export default function App() {
           <img alt="Logo do CoreNotes" src={Logo} className="size-9" />
           <div className="flex items-center md:gap-14 gap-4">
             <h1 className="md:text-2xl text-[#455A64]">CoreNotes</h1>
-            <div className="flex items-center shadow-md border border-gray-300 rounded bg-white md:w-[539px] p-1.5">
+            <div className="flex items-center border border-gray-300 rounded bg-white md:w-[539px] p-1.5">
               <input
                 type="search"
                 placeholder="Pesquisar notas"
@@ -66,7 +66,6 @@ export default function App() {
             </div>
           </div>
         </div>
-        <X className="size-5 text-gray-800 cursor-pointer" />
       </div>
 
 
