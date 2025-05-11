@@ -2,7 +2,7 @@ import { Toaster } from "sonner";
 import Logo from "./assets/logo_core.png"
 import ListNotes from "./components/list-notes";
 import { useState } from "react";
-import { Search, Star, X } from "lucide-react";
+import { Search, Star } from "lucide-react";
 import Alert from "./components/alert";
 import { Note } from "./assets/utils/types";
 
